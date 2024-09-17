@@ -1,24 +1,58 @@
 # skeletonpp
 
-**skeletonpp** is a C++ tool for automatically generating customizable and modular project directory structures, designed to streamline the setup of new projects or the addition of modules to existing ones. The tool will provide a flexible and configurable way to prototype the structure of C++ projects, using configurations defined in `.env` files.
+**skeletonpp** is a C++ tool for automatically generating customizable and modular project directory structures. It is designed to streamline the setup of new projects or the addition of modules to existing ones. The tool provides a flexible and configurable way to prototype the structure of C++ projects using configurations defined in `.env` files.
 
+---
 
-## Key Features:
-- **Flexible Project Structures**: Generate a variety of project structures, from simple single-directory setups to complex multi-folder arrangements (e.g., src, include, foo/bar).
-- **Modular Design**: Add new folders or modules to an existing project, following the same structure rules defined during the initial setup.
-- **Configuration through** `.env`: Define and modify project structures using a `.env` file for easy customization.
-- **Extensible**:
-- **Skeleton Generator**: A function for creating the basic skeleton based on a predefined structure template.
-- **Structure Modifier**: A funciton that allows adding new directories or modules to the existing project structure while mainting consistency. 
+## Table of Contents
+
+- [Key Features](#key-features)
+- [Goals](#goals)
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Generating a Project Skeleton](#1-generating-a-project-skeleton)
+  - [Adding New Modules](#2-adding-new-modules)
+- [Configuration](#configuration)
+  - [Example `.env` File](#example-env-file)
+  - [Defining Custom Structures](#defining-custom-structures)
+- [Future Enhancements](#future-enhancements)
+- [License](#license)
+- [Contact](#contact)
+
+---
+
+## Key Features
+
+- **Flexible Project Structures**: Generate a variety of project structures, from simple single-directory setups to complex multi-folder arrangements (e.g., `src`, `include`, `foo/bar`).
+- **Modular Design**: Add new folders or modules to an existing project, following the same structural rules defined during the initial setup.
+- **Configuration through `.env` Files**: Define and modify project structures using a `.env` file for easy customization.
+- **Skeleton Generator**: Create the basic skeleton based on a predefined structure template.
+- **Structure Modifier**: Add new directories or modules to the existing project structure while maintaining consistency.
+- **Extensible**: Easily extendable to accommodate future enhancements without major changes to the core logic.
 
 ## Goals
-- **Configurable Structure**: The project will use a `.env` file to define multiple possible directory structures. The configurations will allow defining both simple and complex directory setups giving flexibility in how a project is scaffolded. 
-- **Modular Approach**: We aim to make the script modular, so it will:
-    - First, generate a comple project skeleton (directories and files) based on the selected configuration.
-    - Later, allow for the addition of new directories or modules (e.g., bar/ folder) to expand the existing project.
-- **Easy of Use**: By running the script with different `.env` configurations, the user can tailor the structure for specific projects (e.g., basic, src/include, nested).
-- **Extensibility**: The projhect should be easily extendable in the future. Additional templates for new types of project strcutures can be added wihtout requiring any major changes to the core script logic.
- 
+
+- **Configurable Structure**: Utilize a `.env` file to define multiple possible directory structures. The configurations allow for both simple and complex directory setups, providing flexibility in how a project is scaffolded.
+- **Modular Approach**: The script is designed to be modular:
+  - **Initial Generation**: Generate a complete project skeleton (directories and files) based on the selected configuration.
+  - **Extension**: Allow for the addition of new directories or modules (e.g., `bar/` folder) to expand the existing project.
+- **Ease of Use**: By running the script with different `.env` configurations, you can tailor the structure for specific projects (e.g., basic, `src/include`, nested).
+- **Extensibility**: The project should be easily extendable in the future. Additional templates for new types of project structures can be added without requiring major changes to the core script logic.
+
+## Installation
+
+Clone the repository and navigate to the project directory:
+
+```bash
+git clone https://github.com/diyorsattarov/skeletonpp.git
+cd skeletonpp
+```
+
+Make the script executable:
+```
+chmod +x create_structure
+```
+
 ## Example Usage
 1. **Generate Project Skeleton**
     - The tool will accept a base directory (`.`) and a configuration file (e.g., `structure.env`) to generate the project skeleton.
